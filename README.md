@@ -16,14 +16,15 @@ gradients. No original game files or bitmap textures are needed at runtime.
 - The original player start at `(29.5, 57.5)`, facing east.
 - Blue stone, gray stone, and vertical wood paneling at the corresponding map locations.
 - Six fixed prison cell walls with iron bars.
+- Red wall banners on the original north/south flag-wall faces, with the central emblem replaced by the ThorVG logo. East/west faces remain gray stone.
 - Ten blue pots with brown plants and two stone wells (one with blue water, one empty) at their original positions, with wall occlusion and collision.
 - Sliding iron doors with visible thickness. Doors open to 95%, leaving a small edge exposed, and close automatically after three seconds. They stay open while the player occupies the doorway.
-- 58 green ceiling lights with soft pools of light on the floor.
+- Green ceiling lamps and four gold chandeliers at their original map positions, with soft pools of light. Chandeliers replace nearby green lamps and cast warm light.
 - A toggleable outline minimap showing walls, doors, and the player position.
-- Movement, running, strafing, wall collision, and a visual firing effect.
+- Movement, running, strafing, wall collision, and hitscan pistol fire.
+- Animated `lolo_walk.json` billboards at the original guard spawns. They patrol and follow nearby visible players, and shrink away after three hits.
 
-This is an exploration prototype. Enemy AI, combat, sound, items, and decorative
-objects other than the potted plants and wells are not implemented. Secret pushwalls remain fixed walls, and the exit
+This is an exploration prototype. Enemy attacks, sound, items, and decorative objects other than the potted plants and wells are not implemented. Secret pushwalls remain fixed walls, and the exit
 does not advance to another level.
 
 ## Build and run
@@ -50,9 +51,9 @@ The application starts in a **1920×1080** window and requests the GL renderer.
 | Shift | Run |
 | E or Space | Open / close a nearby door |
 | Tab | Toggle the outline minimap |
-| R | Reset the player position and door states |
+| R | Reset the player, doors, and characters |
 | Escape | Quit |
-| Left Ctrl or left mouse button | Visual firing effect; no combat |
+| Left Ctrl or left mouse button | Fire the pistol (three hits defeat a character) |
 
 ## Map data and rendering
 

@@ -7,4 +7,5 @@ toolkit_dep = dependency('thorvg-toolkit')
 
 executable(meson.project_name(),
            'main.cpp',
-           dependencies : toolkit_dep)
+           dependencies : toolkit_dep,
+           cpp_args : ['-DLOLO_PATH="' + (meson.current_source_dir() / 'lolo_walk.json') + '"'])
